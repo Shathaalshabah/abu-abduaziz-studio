@@ -4,6 +4,9 @@ import { useState } from "react";
 
 type Language = "ar" | "en";
 
+const imagePath = (path: string) =>
+  `${process.env.NODE_ENV === "production" ? "/abu-abduaziz-studio" : ""}${path}`;
+
 const content = {
   ar: {
     nav: {
@@ -89,49 +92,49 @@ const content = {
         englishTitle: "Photo Finishing",
         text:
           "نقدم خدمات معالجة وإنهاء الصور باستخدام أحدث الحلول الرقمية، وننتج صورًا جميلة بجودة عالية باستخدام تقنيات صديقة للبيئة.",
-        image: "/services/photo-finishing.jfif",
+        image: imagePath("/services/photo-finishing.jfif"),
       },
       {
         title: "طباعة الكانفس",
         englishTitle: "Canvas Printing",
         text:
           "نقدم خدمات طباعة الكانفس بجودة عالية وأسعار مناسبة، مع التركيز على الدقة وتوازن التباين للحصول على أفضل نتيجة ممكنة.",
-        image: "/services/canvas-printing.jfif",
+        image: imagePath("/services/canvas-printing.jfif"),
       },
       {
         title: "تكبير الصور الرقمية",
         englishTitle: "Digital Photo Enlargement",
         text:
           "نقوم بتكبير الصور رقميًا مع الحفاظ على تفاصيلها ووضوحها، وتحسين مظهرها باستخدام تقنيات تحسين الصور الرقمية.",
-        image: "/services/digital-enlargement.jfif",
+        image: imagePath("/services/digital-enlargement.jfif"),
       },
       {
         title: "إطارات الصور",
         englishTitle: "Picture Framing",
         text:
           "نوفر إطارات مخصصة تضيف لمسة فنية مميزة لصورك، مع مجموعة متنوعة من التصاميم التي تناسب مختلف الأذواق.",
-        image: "/services/picture-framing.jfif",
+        image: imagePath("/services/picture-framing.jfif"),
       },
       {
         title: "تعديل الصور والفيديو",
         englishTitle: "Photo & Video Editing",
         text:
           "نقدم مختلف خدمات تعديل الصور والفيديو، باستخدام تقنيات وأدوات متقدمة لإخراج العمل بصورة عصرية واحترافية.",
-        image: "/services/photo-video-editing.jfif",
+        image: imagePath("/services/photo-video-editing.jfif"),
       },
       {
         title: "التصوير الفوتوغرافي",
         englishTitle: "Still Photography",
         text:
           "نقدم تصويرًا فوتوغرافيًا مميزًا لمجموعة واسعة من المجالات، من التصوير الصناعي إلى التصوير الفردي، مع اهتمام خاص بالضوء والظلال والتفاصيل.",
-        image: "/services/still-photography.jfif",
+        image: imagePath("/services/still-photography.jfif"),
       },
       {
         title: "تغطية المناسبات بالصور والفيديو",
         englishTitle: "Photo & Video Coverage",
         text:
           "يضم فريقنا خبرات متخصصة في تصوير وتغطية المناسبات، لالتقاط أجمل اللحظات والتفاصيل التي تستحق أن تبقى.",
-        image: "/services/event-coverage.jfif",
+        image: imagePath("/services/event-coverage.jfif"),
       },
     ],
 
@@ -329,49 +332,49 @@ const content = {
         englishTitle: "PHOTO FINISHING",
         text:
           "We provide professional photo finishing services using the latest digital photo solutions. We create beautiful prints using environmentally friendly technology.",
-        image: "/services/photo-finishing.jfif",
+        image: imagePath("/services/photo-finishing.jfif"),
       },
       {
         title: "Canvas Printing",
         englishTitle: "CANVAS PRINTING",
         text:
           "We offer high-quality canvas printing at affordable prices, with a strong focus on precision and accurate contrast levels.",
-        image: "/services/canvas-printing.jfif",
+        image:imagePath( "/services/canvas-printing.jfif"),
       },
       {
         title: "Digital Photo Enlargement",
         englishTitle: "DIGITAL PHOTO ENLARGEMENT",
         text:
           "We enlarge your photos digitally while preserving detail and sharpness, enhancing their appearance through advanced digital photo enhancement technologies.",
-        image: "/services/digital-enlargement.jfif",
+        image:imagePath( "/services/digital-enlargement.jfif"),
       },
       {
         title: "Picture Framing",
         englishTitle: "PICTURE FRAMING",
         text:
           "We offer custom frames that give your photos a distinctive artistic touch, with a wide range of styles to suit different tastes.",
-        image: "/services/picture-framing.jfif",
+        image: imagePath("/services/picture-framing.jfif"),
       },
       {
         title: "Photo & Video Editing",
         englishTitle: "PHOTO & VIDEO EDITING",
         text:
           "We provide a wide range of photo and video editing services using advanced technologies and professional tools to create modern, high-quality results.",
-        image: "/services/photo-video-editing.jfif",
+        image:imagePath( "/services/photo-video-editing.jfif"),
       },
       {
         title: "Still Photography",
         englishTitle: "STILL PHOTOGRAPHY",
         text:
           "We produce outstanding photographs across a wide range of categories, from industrial photography to individual photography, with careful attention to light, shadows and detail.",
-        image: "/services/still-photography.jfif",
+        image:imagePath( "/services/still-photography.jfif"),
       },
       {
         title: "Photo & Video Coverage",
         englishTitle: "PHOTO & VIDEO COVERAGE",
         text:
           "Our experienced team provides professional event photography and videography, capturing the beautiful moments and details you will want to remember.",
-        image: "/services/event-coverage.jfif",
+        image:imagePath( "/services/event-coverage.jfif"),
       },
     ],
 
@@ -682,7 +685,7 @@ export default function Home() {
 
             <div className="relative overflow-hidden rounded-[2rem] bg-[#DDD6CA] shadow-2xl">
               <img
-                src="/the_main-phote.jfif"
+                src={imagePath("/the_main-phote.jfif")}
                 alt="Abu Abdulaziz Studio & Labs"
                 className="h-auto w-full object-contain transition duration-700 hover:scale-105 lg:h-[560px] lg:object-cover"
               />
